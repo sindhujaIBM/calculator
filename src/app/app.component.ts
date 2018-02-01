@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  isRegister:boolean = false;
+  isLogin:boolean= true;
+  getStatus(status){
+
+  }
+  showForgotPassword(event){
+    console.log("hi");
+    
+  }
+  showRegistration(event){
+    this.isRegister=true;
+    this.isLogin=false;
+  }
 }

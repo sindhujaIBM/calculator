@@ -1,0 +1,40 @@
+<div>
+    <div>
+      <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+        <div class="form-group">
+          <div class="row">
+            <h1 class="headingCenter" >Registration</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="username">Username</label>
+              <div class="alert" *ngIf="!rForm.controls['username'].valid && rForm.controls['username'].touched">This field is required</div>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" formControlName="username" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="email">email</label>
+              <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Please enter a valid email</div>
+            </div>
+            <div class="col">
+              <input type="email" ngMogel email class="form-control" formControlName="email" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="password">Password</label>
+              <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password must contain atleast 8 characters.</div>
+            </div>
+            <div class="col">
+                <input type="password" class="form-control" formControlName="password" />
+            </div>
+          </div> 
+  
+          <input type="submit" class="btn btn-primary" value="Register" [disabled]="!rForm.valid">
+      </div>
+    </form>
+  </div>
+</div>
