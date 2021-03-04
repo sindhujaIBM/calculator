@@ -1,0 +1,38 @@
+<div class="calcMain">
+  <h2>Calculator</h2>
+  <div class="row calrow">
+    <div class="col">
+      <textarea class="calText" (keydown) ="anyKeyPressed($event)" (change)="changeScroll($event)" >{{ loadPrevData }} </textarea>
+    </div>
+  </div>
+  <div class="row calrow">
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >1</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >2</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >3</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-secondary calc" >*</button></div>
+  </div>
+  <div class="row calrow">
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >4</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >5</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >6</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-secondary calc" >+</button></div>
+  </div>
+  <div class="row calrow">
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >7</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >8</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >9</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-secondary calc" >-</button></div>
+  </div>
+  <div class="row calrow">
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-danger calc" >BS</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-primary calc" >0</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-success calc" >=</button></div>
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn btn-secondary calc" >/</button></div>
+  </div>
+  <div class="row calrow">
+    <div class="col"><button (click) = "anyBtnClicked($event)" class="btn calc" >Reset</button></div>
+  </div>
+  <div class="row calrow">
+    <div class="col"><button (click) = "back($event)" class="btn calc" >Back</button></div>
+  </div>
+</div>

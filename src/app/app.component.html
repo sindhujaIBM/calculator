@@ -1,9 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="mainContainer">
-    <app-login *ngIf="isLogin" ></app-login>
-    <app-registration  *ngIf="isRegister"></app-registration>
-    <div *ngIf="isLogin" class="chkLogin">
-        <p>Not a member? <a href="#" (click)="showRegistration($event)">Register here</a></p>
-        <p>Forgot password? <a href="#" (click)="showForgotPassword($event)"> click here</a></p>
-    </div>
+    <router-outlet></router-outlet>
 </div>

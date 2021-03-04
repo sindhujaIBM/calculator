@@ -1,0 +1,41 @@
+<div>
+  <div>
+    <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+      <div class="form-group">
+        <div class="row">
+          <h1 class="headingCenter" >Login</h1>
+        </div>
+        <div *ngIf="show == true" class="alert" ><p>Invalid User</p></div>
+        <div class="row">
+          <div class="col">
+            <label for="username">Username</label>
+            <div class="alert" *ngIf="!rForm.controls['username'].valid && rForm.controls['username'].touched">This field is required</div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" formControlName="username" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="password">Password</label>
+            <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password must contain atleast 8 characters.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+              <input type="password" class="form-control" formControlName="password" />
+          </div>
+        </div> 
+    
+        <input type="submit" class="btn btn-primary loginBtn" value="Submit" [disabled]="!rForm.valid">
+        
+    </div>
+    </form>
+  </div>
+  <div>
+    <p>Not a member? <button (click)="showRegistration($event)">Register here</button></p>
+  </div>
+</div>
+
