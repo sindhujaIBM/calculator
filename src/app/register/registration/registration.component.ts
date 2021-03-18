@@ -44,11 +44,11 @@ export class RegistrationComponent implements OnInit {
     this.username = post.username;
     this.email = post.email;
 
-    if (!this.checkUserExits(post.username, post.password)) {
+    if (!this.checkUserExists(post.username, post.password)) {
       this.registrationService.registerNewUser(this.username, this.email, this.password);
     }
   }
-  checkUserExits(username: string, password: string) {
+  checkUserExists(username: string, password: string) {
     for (var i = 0; i < this.userList.length; i++) {
       var currentUser = this.userList[i];
       if (currentUser.name == username && currentUser.pwd == password) {
