@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { EnvServiceProvider } from './env.service.provider';
 
 
 @NgModule({
@@ -20,6 +21,9 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule
+  ],
+  providers: [
+    EnvServiceProvider
   ],
   bootstrap: [AppComponent]
 })
