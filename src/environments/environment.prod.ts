@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: '/calculator/assets/data/api/'
+  apiUrl: 'https://sindhujaibm.github.io/calculator/assets/data/api/'
 };
